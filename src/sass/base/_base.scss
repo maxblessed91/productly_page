@@ -1,0 +1,48 @@
+// base styles for html & body, h1,h2,h3
+
+html {
+  font-size: 10px;
+}
+
+body {
+  @extend %font-prim;
+  @include font($size: 1.6rem, $weight: normal, $height: 2.6rem);
+}
+
+h1 {
+  @extend %font-add;
+  @include font(4.4rem, bold, 5.4rem);
+  @include media-mobile {
+    @include font(3.2rem, bold, 4.2rem);
+  }
+}
+
+h2 {
+  @include font(3.4rem, bold, 4.6rem);
+  @include media-mobile {
+    @include font(2.4rem, bold, 3.3rem);
+  }
+}
+
+h3 {
+  @include font(2.4rem, bold, 3.4rem);
+  @include media-mobile {
+    @include font(2rem, bold, 3rem);
+  }
+}
+
+h4 {
+  @include font(2.2rem, 600, 3rem);
+  @include media-tablet {
+    @include font(3.2rem, bold, 4.2rem);
+  }
+}
+
+h5 {
+  @include font(1.6rem, bold, 2.6rem);
+}
+
+.block-shadowed {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}

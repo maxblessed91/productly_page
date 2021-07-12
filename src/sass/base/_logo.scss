@@ -1,0 +1,31 @@
+.logo {
+  display: flex;
+  //hamburger
+}
+
+.logo__header {
+  @extend %transition3;
+  @include media-mobile {
+    margin-left: 87px;
+  }
+}
+
+.logo__header.active {
+  margin-left: 48px;
+  @extend %transition3;
+}
+
+.logo-object {
+  width: 160px;
+  height: 30px;
+}
+
+.logo-path {
+  @extend %transition;
+}
+
+.logo-svg:hover {
+  .logo-path {
+    fill: $color-primary;
+  }
+}
